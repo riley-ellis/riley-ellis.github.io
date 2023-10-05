@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley's Portfolio: Combination Lock Solver</title>
+    <style>
+        /* Your styling goes here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1, h2, h3, h4{
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        figure video {
+            display: block;
+            margin: 0 auto;
+            width: 480px; /* Increase width */
+            height: 360px; /* Increase height */
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Combination Lock Solver</h1>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./projects.html">Projects</a>
+            <!--<a href="./personal.html">Personal</a>-->
+            <a href="./resume.html">Resume</a>
+            <a href="https://www.linkedin.com/in/rileyellis/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <section>
+        <figure>
+            <img src="./photos/combo lock solver/prototype2 pic.jpg" alt="Interior mechanism of the combination lock solver" width="350" height="720">
+        </figure>
+
+        <h2>Objective:</h2>
+        <p>Develop and fabricate a device tailored to ascertain the codes of combination locks, particularly those that may have been forgotten. The benchmark set for this project was to unlock the combination within a 10-minute window.</p>
+
+        <h2>Methodology:</h2>
+        <p>The underlying vulnerability in 3-code combination locks was harnessed. By keenly observing for auditory 'clicks' or notable points of resistance, one could significantly truncate the prospective combination pool from a staggering 64,000 down to a mere 100.
+        The design was perpetually enhanced through cycles of prototyping and rigorous testing phases.
+        An assortment of Arduino scripts was formulated to scrutinize components like stepper motors, rotary encoders, optical encoders, servos, current sensors, and sound sensors.</p>
+
+        <h2>Prototyping Evolution:</h2>
+        <h4>Prototype 1</h4>
+        <figure>
+            <img src="./photos/combo lock solver/prototype1 pic.jpg" alt="First prototype of the combination lock solver" width="350" height="720">
+            <figcaption style="margin-bottom: 20px;">Our preliminary prototype, molded using foam core, glue, and wires, rendered a tangible representation of our envisioned product. 
+                It showcased the placement of the lock, the potential use of a stepper motor to manipulate the dial, 
+                the utility of a servo in extricating the lock's shackle, the power mechanism, 
+                and the embedded Arduino governing the operations.</figcaption>
+        </figure>
+
+        <h4 >Prototype 2</h4>
+        <figure>
+            <video controls>
+                <source src="https://drive.google.com/uc?export=download&id=1F3-UnuuSDxQ-8UePUWDKZlRMLfIi0LJJ" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption style="margin-bottom: 20px;">The successive prototype incorporated foam, coupled with a 28BYJ-48 stepper motor and a rotary encoder. 
+                The demonstration elucidates the encoder's role in calibrating the lock's initial position to zero. 
+                This prototype also ventured into the possibility of detecting the lock's resistance points or 'clicks' through a sound sensor. 
+                However, the iterative design process revealed the impracticality of this method.</figcaption>
+        </figure>
+        
+        <h4 >Prototype 3</h4>
+        <figure>
+            <video controls>
+                <source src="https://drive.google.com/uc?export=download&id=1tmysY6vYXZrhrT_pe0Wyf5ZCCxFZ8YnB" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+            <figcaption style="margin-bottom: 20px;">This footage underscores the device's proficiency in rapidly solving combinations. 
+                The integration of a NEMA17 stepper motor with an optical encoder facilitated the precise measurement of the motor's positioning, 
+                paving the way for the implementation of sophisticated feedback control.</figcaption>
+        </figure>
+
+        <h2>Outcome:</h2>
+        <p>The culmination of our rigorous design process resulted in a prototype proficient in cracking a combination lock code within the targeted 10-minute timeframe.</p>
+        <figure>
+            <img src="./photos/combo lock solver/combo lock solver.png" alt="Final prototype of the combination lock solver" width="550" height="720">
+        </figure>
+    </section>
+    <section>
+        <h2>Read My Report</h2>
+        <iframe src="./documents/Combination Lock Solver Report.pdf" width="100%" height="600px">
+        </iframe>        
+    </section>
+</body>
+</html>

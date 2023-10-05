@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley's Portfolio: Robot Arm Manipulator</title>
+    <style>
+        /* Previous styling ... (copy from the Combination Lock Solver) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1, h2, h3, h4{
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        figure video {
+            display: block;
+            margin: 0 auto;
+            width: 480px; /* Increase width */
+            height: 360px; /* Increase height */
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Robot Arm Manipulator</h1>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./projects.html">Projects</a>
+            <!--<a href="./personal.html">Personal</a>-->
+            <a href="./resume.html">Resume</a>
+            <a href="https://www.linkedin.com/in/rileyellis/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <section>
+        <figure>
+            <img src="./photos/robot arm/arm position1.jpg" alt="Robot arm manipulator prototype" width="350" height="720">
+        </figure>
+
+        <h2>Overview:</h2>
+        <p>My endeavor has been to design and realize a robot arm manipulator endowed with five degrees of freedom. 
+            Tailored to perform pick and place tasks, the terminus of this arm is equipped with a proficient gripper.</p>
+
+        <figure>
+            <img src="./photos/robot arm/complete arm cad.png" alt="CAD design of robot arm manipulator" width="350" height="720">
+        </figure>
+
+        <h2>Design and Fabrication:</h2>
+        <p>Commencing with meticulous design on Fusion360, I segmented the robot into individual components, 
+            followed by their systematic assembly. An iterative approach was adopted—fabricating and trialing each joint successively. 
+            This strategy not only augmented my understanding of part design intricacies for fabrication but also enlightened me about the significance of material and equipment constraints.
+             The entire assembly was 3D printed using PLA on my Ender 3 V2 printer, while I effectively employed available household hardware for the assembly process.</p>
+
+        <h2>Testing and Insights:</h2>
+        <figure>
+            <video width="480" height="360" controls>
+                <source src="https://drive.google.com/uc?export=download&id=1UuZJH3vmNRX7ath5vphcSPOv8xdIqkcS" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption style="margin-bottom: 20px;">Here, I am assessing the functionality of the arm's initial two joints via a rudimentary Arduino script.
+                 This experiment shed light on the Arduino's insufficiency in powering multiple servos, evident from the stark difference in servo performance when operated singularly as opposed to in tandem.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./photos/robot arm/arm position2.jpg" alt="Updated robot arm manipulator prototype" width="350" height="720">
+        </figure>
+
+        <h2>Software Integration and Next Steps:</h2>
+        <p>I have curated Arduino code receptive to the serial monitor's position directives for each servo. 
+            In tandem, a ROS2 node has been developed, capable of transmuting button and axis directives from a PS4 controller into precise servo commands. 
+            Post mastery over the PS4 controller's robot arm manipulation, I aim to leverage Gazebo within the Robot Operating System (ROS) to simulate the arm and conceptualize advanced controls. 
+            This will set the stage for the subsequent prototype iteration, which is envisioned to encompass position feedback capabilities.</p>
+
+    </section>
+
+</body>
+</html>

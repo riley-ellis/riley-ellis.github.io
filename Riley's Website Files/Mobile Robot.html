@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley's Portfolio: Mobile Robot</title>
+    <style>
+        /* Previous styling ... (copy from the Combination Lock Solver or Robot Arm Manipulator) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1, h2, h3, h4{
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        figure video {
+            display: block;
+            margin: 0 auto;
+            width: 480px; /* Increase width */
+            height: 360px; /* Increase height */
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mobile Robot</h1>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./projects.html">Projects</a>
+            <!--<a href="./personal.html">Personal</a>-->
+            <a href="./resume.html">Resume</a>
+            <a href="https://www.linkedin.com/in/rileyellis/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <section>
+        <figure>
+            <img src="./photos/robot car/mobile robot.jpg" alt="Mobile robot car" width="550" height="720">
+        </figure>
+
+        <h2>Overview:</h2>
+        <p>In pursuit of enhancing robotics capabilities, I am engineering a semi-autonomous robot car fortified with ROS2. 
+            This robotic vehicle boasts multiple control modes. Initially, I incorporated Bluetooth-driven control using a PS4 controller in synergy with the robot's Raspberry Pi. 
+            However, the horizon holds grander visions—a GPS following mode that synchronizes with a companion device, 
+            conveying its coordinates via Bluetooth, thereby allowing the robot to track and follow with precision.</p>
+
+        <h2>First Prototype:</h2>
+        <figure>
+            <img src="./photos/robot car/car prototype1.jpg" alt="First prototype of the mobile robot" width="350" height="720">
+        </figure>
+        <p>This wooden prototype encompasses various components—a Pi4 power source, a motor driver, an alternate battery for the motors, 
+            a voltage sensor, a dedicated on/off switch, and a GPS module. While this was a robust starting point, 
+            field testing unveiled its excessive weight as a challenge, leading to motor mount fractures and compromised speed.</p>
+
+        <figure>
+            <img src="./photos/robot car/broken motor mount.jpg" alt="Broken motor mount" width="350" height="720">
+        </figure>
+        <p>The root cause? A sharp-edged design which introduced stress concentration. An overhaul was in order.</p>
+
+        <figure>
+            <img src="./photos/robot car/reprinted motor mount.jpg" alt="Redesigned motor mount in Fusion360" width="350" height="720">
+        </figure> 
+        <p>Redesigned motor mount in Fusion360, addressing the stress concentration challenge with a fillet to enhance durability.</p>
+
+        <h2>Second Prototype:</h2>
+        <figure>
+            <video width="480" height="360" controls>
+                <source src="https://drive.google.com/uc?export=download&id=1AYybEEh1xF74CukedfO3_ULgaWPNh0B9" type="video/mp4">
+                Your browser does not support the video tag. 
+            </video>
+            <figcaption style="margin-bottom: 20px;">Presenting the revised robot prototype—lighter and nimble. 
+                In this demonstration, it seamlessly obeys Bluetooth commands from the PS4 controller.</figcaption>
+        </figure>
+
+        <h2>GPS/Wii Nunchuk Companion Device:</h2>
+        <figure>
+            <img src="./photos/robot car/gps nunchuck companion.jpg" alt="GPS/Wii nunchuk companion device" width="550" height="720">
+        </figure>
+        <p>In the GPS mode, adaptability is paramount. To maintain Bluetooth connectivity while enhancing portability, 
+            I opted for the sleek Wii Nunchuk as the primary controller. 
+            Integrated with an ESP32, this mode is activated with a simple button press, 
+            seamlessly transmitting its GPS location to the robot.</p>
+
+        <figure>
+            <video width="480" height="360" controls>
+                <source src="https://drive.google.com/uc?export=download&id=1Onaqnsf8OsiHCtoM-KdyM833DWzLyOi3" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption style="margin-bottom: 20px;">This prototype showcases the nuanced control achieved using the Nunchuk controller via Arduino for modulating motor speeds.</figcaption>
+        </figure>
+
+        <h2>Future Endeavors:</h2>
+        <p>My aspirations encompass:</p>
+        <ul>
+            <li><strong>Mission Planning Mode:</strong> The robot will be endowed with the capability to autonomously navigate a pre-decided GPS path.</li>
+            <li><strong>Obstacle Avoidance & SLAM:</strong> With a LiDAR sensor on board and the wheels equipped with rotary encoders, the robot will adeptly steer clear of obstructions. All these modes will converge harmoniously under the umbrella of ROS2.</li>
+        </ul>
+
+    </section>
+
+</body>
+</html>
