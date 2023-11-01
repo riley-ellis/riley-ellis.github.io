@@ -1,2 +1,2 @@
 # riley-ellis.github.io
-This is my portfolio website.
+[Check out my portfolio website!](https://riley-ellis.github.io/)
